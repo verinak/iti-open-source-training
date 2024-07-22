@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Registration Form</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./roadmap.html">Road Map</a></li>
+            <li><a href="./register.html">Registration Form</a></li>
+            <li><a href="https://www.facebook.com/ITIAlexBranch/" target="_blank">Contact</a></li>
+        </ul>
+        <img src="./images/ITI_logo.png" height="60px">
+    </header>
+
+    <!-- page content -->
+    <div class="main main-form">
+
+        <div class="form-content">
+
+            <h1>Register - Create Account</h1>
+            <p>Fields marked with <span class="asterisk">*</span> are compulsory fields.</p>
+
+            <form action="#" method="post">
+                <table>
+                    <tr>
+                        <td class="form-label">
+                            <label><span class="asterisk">*</span>Your Name</label>
+                        </td>
+                        <td class="form-input">
+                            <input type="text" name="fname" required>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="form-label">
+                            <label><span class="asterisk">*</span>E-Mail ID</label>
+                        </td>
+                        <td class="form-input">
+                            <input type="email" name="email" required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-label">
+                            <label>Alternate E-Mail ID</label>
+                        </td>
+                        <td class="form-input">
+                            <input type="email" name="alt-email">
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="form-label">
+                            <label>Your Phone</label>
+                        </td>
+                        <td >
+                            <div>
+                                <table class="phone-inputs">
+                                    <tr>
+                                        <td class="phone-label">Country Code</td>
+                                        <td class="phone-label">City Code</td>
+                                        <td class="phone-label">Phone Number</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="form-input"><input type="number" name="country"> - </td>
+                                        <td class="form-input"><input type="number" name="city"> - </td>
+                                        <td class="form-input"><input type="number" name="phone"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-label">
+                            <label>Mobile Phone</label>
+                        </td>
+                        <td class="form-input">
+                            <input type="tel" name="mobile" pattern="01[0-9]{9}">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-label">
+                            <label><span class="asterisk">*</span>Your Postal Address</label>
+                        </td>
+                        <td class="form-input">
+                            <textarea name="address" rows="5" cols="50" required></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-label">
+                            <label><span class="asterisk">*</span>Country</label>
+                        </td>
+                        <td class="form-input">
+                            <select name="country" required>
+                                <option value="" disabled selected> ----- Select One ----- </option>
+                                <option value="eg">Egypt</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td class="form-label">
+                            <label><span class="asterisk">*</span>Password</label>
+                        </td>
+                        <td class="form-input">
+                            <input type="password" name="password" required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-label">
+                            <label><span class="asterisk">*</span>Re-Enter Password</label>
+                        </td>
+                        <td class="form-input">
+                            <input type="password" name="password_confirm" required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-end" colspan="3">
+                            <input type="checkbox"name="terms" value="terms" required>
+                            <label for="terms"> I accept the <a href="#">Terms of Use</a></label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="form-end" colspan="2">
+                            <input type="submit" value="Continue >>">
+                            <input type="reset" value="Reset">
+                        </td>
+                    </tr>
+
+                </table>
+                
+            </form>
+        
+        </div>
+    </div>
+
+
+
+
+    <!-- footer -->
+    <footer class="center">
+        <hr />
+        <p><strong>Copyright 2021 by Noha Salah &reg;. All Rights Reserved.</strong></p>
+    </footer>
+</body>
+</html>
