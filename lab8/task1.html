@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+
+    <h1>Task 1</h1>
+
+
+    <script>
+
+        // cds.VirinaMichelle40977@alexu.edu.eg
+
+        let pattern = /^[a-zA-Z]+$/
+        let userName =  ""
+        do {
+            userName = prompt("What's your name?");
+        } while(!pattern.test(userName))
+
+        pattern = /^\d{8}$/
+        let home =  ""
+        do {
+            home = prompt("Enter your home phone:");
+        } while(!pattern.test(home))
+
+        pattern = /^01[0|1|2|5]\d{8}$/
+        let mobile =  ""
+        do {
+            mobile = prompt("Enter your mobile phone:");
+        } while(!pattern.test(mobile))
+        
+        pattern = /^[a-zA-Z0-9_.-]+@[a-zA-Z]+(\.[a-zA-Z]{2,4})+$/
+        let email =  ""
+        do {
+            email = prompt("Enter your email:");
+        } while(!pattern.test(email))
+
+        let choices = ['blue', 'red', 'green']
+        let color = ""
+        do {
+            color = prompt(`Choose a color "${choices.toString()}"`);
+        } while(!(choices.includes(color)))
+
+        let today = new Date();
+
+        let day = today.getDate();
+        let month = today.getMonth() + 1;
+        let year = today.getFullYear();
+
+
+        document.write(`
+        <p><span style="color: ${color};">Welcome dear guest</span> ${userName}</p>
+        <p><span style="color: ${color};">Your telephone number</span> ${home}</p>
+        <p><span style="color: ${color};">Your mobile number</span> ${mobile}</p>
+        <p><span style="color: ${color};">Your email address</span> ${email}</p>
+        <br/>
+        <p><span style="color: ${color};">Today is</span> ${day}</p>
+        <p><span style="color: ${color};">We are in month</span> ${month}</p>
+        <p><span style="color: ${color};">We are in year</span> ${year}</p>
+        `);
+
+    </script>
+</body>
+</html>

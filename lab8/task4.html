@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+
+    <h1>Task 4</h1>
+
+
+    <script>
+
+        function getNumberInput(prompt_str) {
+            let n;
+            do {
+                let input = prompt(prompt_str);
+                n = parseFloat(input);
+            } while (isNaN(n) || n < 0 );
+            
+            return n;
+        }
+
+        // circle area
+        let radius = getNumberInput('Enter circle radius to calculate area: ');
+        let area = Math.PI * Math.pow(radius, 2);
+        alert(`The circle area is ${area.toFixed(4)}.`);
+
+        // square root
+        let num = getNumberInput('Enter a number to calculate square root: ');
+        let root = Math.sqrt(num);
+        alert(`The square root is ${root.toFixed(4)}.`);
+
+        // cosine
+        let angleDegree = getNumberInput('Enter an angle to calculate cosine: ');
+        let angleRadian = angleDegree * (Math.PI / 180);
+        let cosine = Math.cos(angleRadian);
+
+        document.write(`cos ${angleDegree}&deg; is ${cosine.toFixed(4)}`);
+
+
+
+    </script>
+</body>
+</html>

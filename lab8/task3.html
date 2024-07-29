@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+
+    <h1>Task 3</h1>
+
+
+    <script>
+
+        function getNumbers() {
+            let numbers = [];
+            for (let i = 0; i < 5; i++) {
+                let n;
+                do {
+                    let input = prompt(`Enter number ${i + 1}:`);
+                    n = parseFloat(input);
+                } while (isNaN(n));
+                numbers.push(n);
+            }
+            return numbers;
+        }
+
+        let numbers = getNumbers();
+        
+        document.write(`
+        <p><b>values entered: </b>${numbers}</p>
+        <p><b>sorted ascending: </b>${numbers.toSorted((x, y) => x - y)}</p>
+        <p><b>sorted descending: </b>${numbers.toSorted((x, y) => y - x)}</p>
+            
+        `);
+
+
+
+    </script>
+</body>
+</html>

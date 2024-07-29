@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<body>
+
+    <h1>Task 2</h1>
+
+
+    <script>
+
+        // this is a javascript string demo
+
+        function largestWord(input) {
+
+            let words = input.split(' ');
+            
+            let index = 0;
+            let maxLength = 0;
+            
+            for (let i = 0; i < words.length; i++) {
+                if (words[i].length > maxLength) {
+                    index = i;
+                    maxLength = words[i].length;
+                }
+            }
+            
+            return words[index];
+        }
+
+        let input = prompt('Enter a sentence:');
+
+        document.write(largestWord(input));
+
+
+    </script>
+</body>
+</html>
