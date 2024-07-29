@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+    
+    <h1>Task 3</h1>
+
+
+    <script>
+
+        let userName = "";
+        while(true){
+            userName = prompt("What's your name?");
+            if(userName && isNaN(userName)){
+                break;
+            }
+            console.log("Invalid name, " + userName)
+        }
+
+        let yearInput = "";
+        let year = 0;
+        while(true){
+            yearInput = prompt("What year were you born?");
+            if(yearInput){
+                year = Number(yearInput);
+                if(year >= 1900 && year <= 2024) {
+                    break;
+                }
+            }
+            console.log("Invalid birth year, " + yearInput)
+        }
+
+        let age = 2024 - year;
+
+        document.write(`
+        <p><b><u>Name:</u></b> ${userName}</p>
+        <p><b><u>Birth year:</u></b> ${year}</p>
+        <p><b><u>Age:</u></b> ${age}</p>
+        `)
+
+        
+
+    </script>
+</body>
+</html>
