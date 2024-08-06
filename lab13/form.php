@@ -107,7 +107,7 @@
         $name = $_POST['name'];
         $email = $_POST['email'];
         $group = (empty($_POST['group'])) ?  "None" : $_POST['group'];
-        $details = (empty($_POST['group'])) ?  "None" : $_POST['details'];
+        $details = (empty($_POST['details'])) ?  "None" : $_POST['details'];
         $gender = $_POST['gender'];
         $courses = $_POST['courses'];
         $coursesList = implode(", ", $courses);
