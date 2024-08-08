@@ -37,6 +37,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
 
@@ -60,6 +61,9 @@
                 <th>Email</th>
                 <th>Gender</th>
                 <th>Mail Status</th>
+                <th></th>
+                <th></th>
+                <th></th>
 
             </tr>
 
@@ -72,6 +76,11 @@
                 echo "<td>".$user['email']."</td>";
                 echo "<td>".$user['gender']."</td>";
                 echo "<td>". ($user['mail_status'] ? "yes" : "no")."</td>";
+
+                echo"<td> <a href='view.php?user_id=" .$user['userid']. "' class='link-underline link-underline-opacity-0'><i data-feather='eye'></i></a> </td>";
+                echo"<td> <a href='edit.php?user_id=" .$user['userid']. "' class='link-underline link-underline-opacity-0'><i data-feather='edit-3'></i></a> </td>";
+                echo"<td> <a href='delete.php?user_id=" .$user['userid']. "' class='link-underline link-underline-opacity-0'><i data-feather='trash-2'></i></a> </td>";
+
                 echo "</tr>";
             }
             
@@ -80,7 +89,11 @@
 
     </main>
 
-    
+
+
+    <script>
+        feather.replace();
+    </script>
     
 </body>
 </html>

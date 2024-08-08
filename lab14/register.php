@@ -63,7 +63,7 @@
             </table>
 
             <input class="btn btn-primary" type="submit" value="Submit" name="submit">
-            <a href="./index.php"><button type="button" class="btn btn-secondary">Cancel</button></a>
+            <a href="./"><button type="button" class="btn btn-secondary">Cancel</button></a>
         </form>
 
 
@@ -98,11 +98,10 @@
         }
         else {
             mysqli_close($link);
-            header("Location: ./index.php");
+            header("Location: ./");
             exit();
         }
     }
-    
     
     ?>
     
